@@ -1,0 +1,247 @@
+/* Add a border on the left-hand side of the form */
+form {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 20px grey;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    
+    /* Add left border with deep sky blue color */
+    border-left: 100px solid deepskyblue;
+    border-right: 20px solid gainsboro;
+}
+
+
+body {
+    background-color: white;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    border: none;
+    
+}
+h1 {
+    color: deepskyblue;
+    font-size: 24px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: justify;
+}
+main {
+    width: 1000px; /* Set the width as needed */
+    margin: 0 auto; /* Center the form container */
+    border: none; /* Add outside box border */
+    border-radius: 5px;
+    padding-top: 1px;
+    background-color: #E6F4FF; /* Light blue background */
+    border: none;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333333; /* Set label color to grey */
+}
+input[type="text"], input[type="email"], input[type="tel"],select {
+    border: none;
+    border-bottom: 2px solid grey;
+    font-size: 16px;
+    height: 30px; /* Reduced height to match left-hand side */
+    padding-left: 10px;
+    width: 70%;
+}
+button[type="reset"] {
+    background-color: #E6E6E6;
+    backface-visibility: hidden;
+    color: gray;
+    border: none;
+    float: left;
+    padding: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 200px;
+    width: 100%;
+    margin-bottom: 10px;
+    float: left;
+    flex-basis: 48%
+}
+button[type="submit"] {
+    background-color: deepskyblue;
+    border: none;
+    padding: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 200px;
+    width: 100%;
+    color: white;
+    margin-bottom: 10px;
+    float: right;
+    flex-basis: 48%; 
+   
+;
+}
+   .form-group { 
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    border: none;
+   
+}
+  
+.form-group:nth-child(odd) {
+    background-color: white; /* Light blue background for odd rows */
+border: none;
+}
+.form-group:nth-child(even) {
+    background-color: white;
+    border: none;
+}
+
+/* Additional style for the new form fields */
+.form-group .form-item {
+    flex-basis: 100%;
+    flex-grow: 1;
+}
+
+/* Style to remove background color of the basic details form heading */
+.form-heading {
+    background-color: transparent;
+    grid-column: 1 / span 2;
+    font-size: 24px;
+}
+
+/* Style to align buttons to bottom corners */
+.form-actions {
+    float: right;
+     margin-right: 100px;
+    display: flex;
+    margin-top: 20px;
+
+}
+.form-action {
+    float:left;
+    display: flex;
+    margin-top: 20px;
+    margin-left: 350px;
+
+}
+
+/* Additional style to align last name horizontally with first name */
+.form-item-left {
+    flex-basis: 50%;
+  
+}
+
+.form-item-right { 
+    flex-basis: 50%;
+    border: none;
+}
+
+/* Style to align state and city fields horizontally with space in between */
+.form-item-inline {
+    display: flex;
+    flex-direction: row;
+    gap: 25px; /* Increased gap between state and city */
+}
+.form-item-inline div:nth-child(1) {
+    flex: 2; /* Make state field expand to fill available space */
+}
+.form-item-inline div:nth-child(2) {
+    flex: 2; /* Make city field expand to fill available space */
+}
+
+/* Style for the icon container */
+.input-icon-container {
+    position: relative;
+}
+
+/* Style for the validation icon */
+.input-validation-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: green;
+}
+
+/* Style for the valid email icon */
+.input-validation-icon.valid::before {
+    content: "\f058";
+}
+
+/* Style for the invalid email icon */
+.input-validation-icon.invalid::before {
+    content: "\f057";
+    color: red;
+}
+
+/* Font Awesome icon font settings */
+.input-validation-icon::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 18px;
+}
+
+/* Add styles for invalid fields */
+.form-item-left.invalid input,
+.form-item-right.invalid input {
+    border-color: #e74c3c;
+    background-color: #f9dddd;
+}
+
+/* Add styles for the error message */
+.error-message {
+    color: #e74c3c;
+    font-size: 14px;
+    margin-top: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+label {
+    color: grey;
+}
+input {
+    border: none;
+    border-bottom: 2px solid grey;
+    padding-bottom: 5px;
+    width: 70%;
+    height: 25px;
+    margin: 5px;
+    background-color: transparent;
+}
+   
+
+/* Add red border to invalid input fields */
+input.invalid {
+    border: none;
+    border-bottom: 2px solid red;
+   
+}
+
+/* Add red outline to required fields that are not filled out */
+input:required:invalid {
+    border-bottom: 2px solid red;
+}
+/*Phone Number input*/
+input[type="tel"]select{
+    border: none;
+    border-bottom: 2px solid #0072C6;
+    font-size: 16px;
+    height: 30px; /* Reduced height to match left-hand side */
+    padding-left: 10px;
+    width: 70%;
+}
+fieldset{
+    border:none
+}
